@@ -12,44 +12,52 @@
     <body>
         
 
-        <div class="urna">
-            <div class="tela">
+        <div id="urna">
+            <div id="tela">
+                <div id="top-tela">
+                    Sou a parte superior
+                </div>
 
+                <div id="bottom-tela">
+                    <span>Aperte a tecla:</span>
+                    <span>VERDE para CONFIRMAR este voto</span>
+                    <span>VERMELHO para REINICIAR este voto</span>
+                </div>
             </div>
-            <div class="teclado">
-                <div class="top-teclado">
+            <div id="teclado">
+                <div id="top-teclado">
                     <img  src="../img/justica_eleitoral.png">
                     <h3>URNA ELEITORAL</h3>
                 </div>
 
-                <div class="container-btn-teclado">
+                <div id="container-btn-teclado">
                     <div class="container">
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
+                        <button onclick="acionabtn(this.value)" value="1" id="btn-1">1</button>
+                        <button onclick="acionabtn(this.value)" value="2" id="btn-2">2</button>
+                        <button onclick="acionabtn(this.value)" value="3" id="btn-3">3</button>
                     </div>
 
                     <div class="container">
-                        <button>4</button>
-                        <button>5</button>
-                        <button>6</button>
+                        <button onclick="acionabtn(this.value)" value="4" id="btn-4">4</button>
+                        <button onclick="acionabtn(this.value)" value="5" id="btn-5">5</button>
+                        <button onclick="acionabtn(this.value)" value="6" id="btn-6">6</button>
                     </div>
 
                       <div class="container">
-                        <button>7</button>
-                        <button>8</button>
-                        <button>9</button>
+                        <button onclick="acionabtn(this.value)" value="7" id="btn-7">7</button>
+                        <button onclick="acionabtn(this.value)" value="8" id="btn-8">8</button>
+                        <button onclick="acionabtn(this.value)" value="9" id="btn-9">9</button>
                       </div>
 
                       <div class="container">
-                        <button>0</button>
+                        <button onclick="acionabtn(this.value)" value="0" id="btn-0">0</button>
                       </div>
                   </div>
 
-                  <div class="bottom-teclado">
-                    <button class="btn-branco">BRANCO</button>
-                    <button class="btn-corrige">CORRIGE</button>
-                    <button class="btn-confirma">CONFIRMA</button>
+                  <div id="bottom-teclado">
+                    <button onclick="aciona_btnbranco()" class="btn-branco">BRANCO</button>
+                    <button onclick="aciona_btncorrige()" class="btn-corrige">CORRIGE</button>
+                    <button onclick="aciona_btnconfirma()" class="btn-confirma">CONFIRMA</button>
                   </div>
             </div>
         </div>
