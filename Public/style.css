@@ -187,6 +187,18 @@ body{
     box-shadow: 3px 3px 3px black;
 }
 
+.btn.active{
+    background-color: white;
+    font-size: 32px;
+    border: none;
+    color: white;
+    width: 70px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px gray;
+}
+
 /* Botões Parte inferior do teclado */
 #bottom-teclado{
     width: 100%;

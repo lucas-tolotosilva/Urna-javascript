@@ -2,6 +2,9 @@ console.log(candidato1);
 console.log(candidato2);
 console.log(candidato3);
 
+let voto = 0;
+const branco = 0;
+const confirma = 0;
 let input = document.getElementById("input");
 //const container = document.getElementById("container");
 
@@ -12,7 +15,6 @@ function acionabtn(value_btn){
     }
     testaTamanhoInput();
 
-    
 }
 
 // Função responsável por passar o valor do botão para o input 
@@ -27,9 +29,7 @@ function passarValorTela(value_input,i){
 function testaTamanhoInput(){
     input.value.toString()
 
-    if(input.value.length == 2){
-        console.log("passando 2 números")
-    }
+
     
     imprimeCandidatos();
 }
@@ -99,7 +99,41 @@ function setCandidato3(){
         const set_img_vice = vice.setAttribute("src",candidato3.foto_vice);
 }
 
-/*function aciona_btncorrige(){
-   imprimeCandidatos() = "";
+// Função btn CORRIGE
+function aciona_btncorrige(){
+    input.value = "";
+    const nome = document.getElementById("nome").innerHTML = " ";
+        
+        const partido = document.getElementById("partido").innerHTML = " ";
+
+        const nome_vice = document.getElementById("nome-vice").innerHTML = " ";
+
+        const set_img_candidato = presidente.setAttribute("src","");
+
+        const set_img_vice = vice.setAttribute("src","");
+   
    input.focus();
-} */
+} 
+
+//Função btn BRANCO
+function aciona_btnbranco(){
+    voto = 1;
+    alert("Voto BRANCO contabilizado");
+}
+
+//Funcão btn CONFIRMA
+function aciona_btnconfirma(){
+    voto = 2;
+    alert("Voto Confirmado!")
+    
+}
+
+//Função Verifica tipo de Voto
+function verifica(){
+    if(voto == 1){
+        branco = branco + 1;
+    } else if(voto ==2){
+        confirma = confirma + 1;
+    }
+}
+
